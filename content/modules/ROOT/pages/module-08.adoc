@@ -1,0 +1,188 @@
+Often when software is updated, services on a host must be restarted
+before the new software can run. The tracer utility can detect when a
+service needs to be restarted, and notify you through Red Hat Satellite.
+
+To demonstrate this capability, we’ll install the
+`+katello-host-tools-tracer+` package on our hosts through remote
+execution. We’ll perform the following tasks:
+
+[arabic]
+. Synchronize the `+Satellite client 6+` repository to our Satellite
+server.
+. Make the repository available to our hosts by adding it to our
+`+RHEL9+` content view.
+. Install `+katello-host-tools-tracer+` on our hosts.
+
+Go to `+Content+` and click on `+Red Hat Repositories+`.
+
+.rh repos
+image::redhatrepositories.png[rh repos]
+
+Next add the `+satellite-client-6-for-rhel-9+` repository.
+
+[arabic]
+. Paste the following into the search bar.
+
+[source,bash]
+----
+satellite-client-6-for-rhel-9
+----
+
+[arabic, start=2]
+. Click the `+++` symbol.
+
+.repo 6
+image::client6.png[repo 6]
+
+Next, we’ll navigate to the `+Products+` menu.
+
+.products
+image::products.png[products]
+
+Click on `+Red Hat Enterprise Linux for x86_64+`.
+
+.rhel product click
+image::rhelproductclick.png[rhel product click]
+
+Do the following to synchronize the repository with Satellite.
+
+[arabic]
+. Select `+Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs+`.
+. Click `+Sync Now+`.
+
+.sync
+image::syncclientproduct.png[sync]
+
+Now that the repository containing the Tracer application is
+synchronized to Satellite, we’ll make it available to our hosts by
+adding and enabling the repository in our existing `+RHEL9+` content
+view.
+
+Navigate to `+Content Views+`.
+
+.cv
+image::contentview.png[cv]
+
+Click on the `+RHEL9+` content view.
+
+.rhel9cv
+image::rhel9cv.png[rhel9cv]
+
+Click on the `+Repositories+` tab.
+
+.repos
+image::cvrepotab.png[repos]
+
+Add the repo.
+
+[arabic]
+. Select the repo `+Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs+`.
+. Click `+Add repositories+`.
+
+.add repos
+image::addclientrepo.png[add repos]
+
+Click `+Publish new version+`.
+
+.pub
+image::publishnewversion.png[pub]
+
+We’ll now publish a new version of the content view.
+
+[arabic]
+. Add a description to the new version of the content view. In this
+example we added `+Added the Satellite Client 6 repo.+`.
+. Click `+Promote+`.
+. Click on the `+Test+` lifecycle environment.
+. Click `+Next+`.
+
+.pubcv
+image::publishclientrepocv.png[pubcv]
+
+Click `+Finish+`.
+
+.finish
+image::finishclientcv.png[finish]
+
+Now we’ll enable access to the
+`+Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs+` repo by specifying
+it in the `+Activation Key+`. When new hosts are added, they will
+automatically receive access to the enabled repository so that Tracer
+can be installed.
+
+With existing hosts, there is one extra step which we’ll cover in this
+challenge.
+
+First, navigate to `+Activation Keys+`.
+
+.activation keys
+image::akmenu.png[activation keys]
+
+Click on the `+RHEL9+` activation key.
+
+.rhel9ak
+image::rhel9ak.png[rhel9ak]
+
+Click on `+Repository Sets+`.
+
+.rhel9 ak repo set
+image::rhel9akreposet.png[rhel9 ak repo set]
+
+Override the `+Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs+`
+repository to `+Enabled+`.
+
+[arabic]
+. Select the `+Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs+`
+repository.
+. Click `+Override to Enabled+`.
+
+.override
+image::overrideenable.png[override]
+
+Here’s the extra step we’ll need to perform to enable access to the
+Tracer app for our existing hosts. New hosts added after this step will
+automatically get access.
+
+Go back to the `+All hosts+` menu.
+
+.allhostsagain
+image::allhostsagain.png[allhostsagain]
+
+[arabic]
+. Select your hosts (rhel1 and rhel2).
+. Click `+Select Action+`.
+. Select `+Schedule Remote Job+`.
+
+.all host
+image::scheduleremotejob.png[all host]
+
+In the `+Category and Template+` menu, click `+Next+`.
+
+.run template
+image::runjobtemplate.png[run template]
+
+In the `+Target hosts and inputs+` menu, do the following.
+
+[arabic]
+. Paste this command. It will enable the Satellite 6 client repo and
+install the Tracer software.
+
+[source,bash]
+----
+dnf config-manager --set-enabled satellite-client-6-for-rhel-9-x86_64-rpms && dnf install -y katello-host-tools-tracer
+----
+
+[arabic, start=2]
+. Click `+Next+`.
+
+.target hosts
+image::targethosts.png[target hosts]
+
+Keep clicking `+Next+` until you reach the `+Review details+` menu and
+click `+Run+`.
+
+.review and run
+image::reviewandrun.png[review and run]
+
+Tracer is now installed. We’ll see how it will help us in the next
+challenge, where we apply errata updates.

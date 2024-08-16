@@ -13,12 +13,12 @@ We’ll create a host group that applies a Red Hat Enterprise Linux System
 Role to configure the firewall to allow incoming connections through
 port 80/tcp.
 
-Navigate to the `+Configure+` and `+Host Groups+` menu.
+Navigate to the `Configure` and `Host Groups` menu.
 
 .host groups menu
 image::menuhostgroups.png[host groups menu]
 
-Click on `+Create Host Group+`.
+Click on `Create Host Group`.
 
 .create host group
 image::createhostgroupbutton.png[create host group]
@@ -26,21 +26,21 @@ image::createhostgroupbutton.png[create host group]
 In the host group menu do the following:
 
 [arabic]
-. Name the host group `+Application Servers+`.
-. Select the `+Test+` lifecycle environment.
-. Select the `+RHEL9+` content view.
-. Select `+satellite.lab+` as the content source.
-. Click on `+Ansible Roles+`
+. Name the host group `Application Servers`.
+. Select `satellite.lab` as the content source.
+. Select the `Test` lifecycle environment.
+. Select the `RHEL9` content view.
+. Click on `Ansible Roles`
 
 .1
-image::createhostgroup1.png[1]
+image::createhostgroup-new-1.png[1]
 
 In the Ansible Roles menu do the following:
 
 [arabic]
 . Navigate to the second page of system roles.
-. Click on `+rhel-system-roles.firewall+`.
-. Click on `+Parameters+`.
+. Click on `rhel-system-roles.firewall`.
+. Click on `Parameters`.
 
 .2
 image::createhostgroup2.png[2]
@@ -49,10 +49,10 @@ We need to tell the firewall system role to allow incoming connections
 to port 80/tcp. In the Parameters menu do the following:
 
 [arabic]
-. Click `+Add Parameter+`.
-. Name the parameter `+firewall+`.
-. Choose the type `+array+`.
-. Copy and paste the following into the `+value+` field.
+. Click `Add Parameter`.
+. Name the parameter `firewall`.
+. Choose the type `array`.
+. Copy and paste the following into the `value` field.
 
 [source,json]
 ----
@@ -63,26 +63,16 @@ to port 80/tcp. In the Parameters menu do the following:
 properties found in an ansible playbook.
 
 [arabic, start=5]
-. Click `+Activation Keys+`.
+. Click `Activation Keys`.
 
 .3
 image::createhostgroup3.png[3]
 
-*_NOTE:_* `+Host Group Parameters+` are variables that can be applied by
-RHEL System Roles or Ansible Roles. You can find a list of available
-variables by clicking on Configure > Ansible > Variables.
-`+Host Group Parameters+` can help you configure subsets of hosts using
-RHEL System Roles with different variables, according to your
-requirements.
-
-.variables
-image::variables.png[variables]
-
-We will assign the `+RHEL9+` activation key to this group.
+We will assign the `RHEL9` activation key to this group.
 
 [arabic]
-. Under `+Activation Keys+` enter `+RHEL9+`.
-. Click on `+Submit+`.
+. Under `Activation Keys` enter `RHEL9`.
+. Click on `Submit`.
 
 .4
 image::createhostgroup4.png[4]

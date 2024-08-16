@@ -19,15 +19,23 @@ stages to the application life cycle:
 * Beta Release
 * Production
 
-To find out more about lifecyce environments, please refer to
-https://access.redhat.com/documentation/en-us/red_hat_satellite/6.11/html/managing_content/creating_an_application_life_cycle_content-management[Satellite
+To find out more about lifecycle environments, please refer to
+https://access.redhat.com/documentation/fr-fr/red_hat_satellite/6.15/html/managing_content/managing_application_lifecycles_content-management[Satellite
 documentation].
 
-Navigate to the `+Lifecycle Environments+` menu.
+Navigate to the `Lifecycle Environments` menu.
 
-Click on `+Create Environment Path+`.
+image:../assets/lifecycle-environments.png[../assets/lifecycle-environments]
 
-Create a new environment. We’ll call this one `+Test+`. Then click
-`+save+` to save it.
+Click on `Create Environment Path`.
 
-The `+Lifecycle Environment Paths+` menu should look like this.
+image:../assets/createenvironment.png[../assets/createenvironment]
+
+Create a new environment. We’ll call this one `Test`. Then click `save`
+to save it.
+
+image:../assets/newenvironment.png[../assets/newenvironment]
+
+The `Lifecycle Environment Paths` menu should look like this.
+
+image:../assets/envmenuresult.png[../assets/envmenuresult]

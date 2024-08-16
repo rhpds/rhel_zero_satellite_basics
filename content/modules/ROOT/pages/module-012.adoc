@@ -8,7 +8,7 @@ Go to the Content Views menu.
 .cv
 image::contentview.png[cv]
 
-Click on the `+RHEL9+` content view.
+Click on the `RHEL9` content view.
 
 .rhel9
 image::rhel9cv.png[rhel9]
@@ -16,8 +16,8 @@ image::rhel9cv.png[rhel9]
 Do the following.
 
 [arabic]
-. Click on the `+Filters+` tab.
-. Click `+Create filter+`.
+. Click on the `Filters` tab.
+. Click `Create filter`.
 
 .filter
 image::filter.png[filter]
@@ -25,16 +25,16 @@ image::filter.png[filter]
 Create a filter with the following steps.
 
 [arabic]
-. Name the filter `+emacs+`.
-. Select `+Exclude filter+`.
+. Name the filter `emacs`.
+. Select `Exclude filter`.
 . Give the filter a description. We’re going to exclude emacs from being
-included in the `+RHEL9+` content view.
-. Click `+Create filter+`.
+included in the `RHEL9` content view.
+. Click `Create filter`.
 
 .create filter
 image::createfilter.png[create filter]
 
-Next, click `+Add RPM rule+`.
+Next, click `Add RPM rule`.
 
 .emacs
 image::emacsrpmrule.png[emacs]
@@ -42,35 +42,34 @@ image::emacsrpmrule.png[emacs]
 Configure your RPM rule in the following way.
 
 [arabic]
-. Since we’re filtering `+emacs+`, enter `+emacs+`.
-. Select `+All versions+`.
-. Click `+Add rule+`.
+. Since we’re filtering `emacs`, enter `emacs`.
+. Select `All versions`.
+. Click `Add rule`.
 
 .add rpm rule
 image::addrpmruleemacs.png[add rpm rule]
 
-Click `+Publish new version+` to publish a new version of the `+RHEL9+`
-content view containing our new `+emacs+` filter.
+Click `Publish new version` to publish a new version of the `RHEL9`
+content view containing our new `emacs` filter.
 
 .filter pub
 image::publishcvfilter.png[filter pub]
 
-The new content view will make `+emacs+` unavailable for hosts to
-install.
+The new content view will make `emacs` unavailable for hosts to install.
 
 [arabic]
 . Add a description to the content view version. In this case,
-`+added emacs filter+`.
-. Select `+Promote+`.
-. Select the `+Test+` lifecycle environment.
-. Click `+Next+`.
+`added emacs filter`.
+. Select `Promote`.
+. Select the `Test` lifecycle environment.
+. Click `Next`.
 
 .publish
 image::publishfiltercv.png[publish]
 
 Ensure the details of this new version are correct and then click
-`+Finish+`. Make sure to wait for the content view to finish publishing
-or else the filter won’t work properly.
+`Finish`. Make sure to wait for the content view to finish publishing or
+else the filter won’t work properly.
 
 Next, go into the terminal of one of the hosts and enter the following.
 

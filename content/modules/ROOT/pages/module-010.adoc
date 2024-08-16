@@ -8,22 +8,22 @@ to it. Specifically, port 80/tcp was to be opened. You can find out more
 about https://access.redhat.com/articles/3050101[RHEL System Roles
 here].
 
-Once again, navigate to `+All Hosts+`.
+Once again, navigate to `All Hosts`.
 
 .all hosts
-image::allhostssystemrole.png[all hosts]
+image::allhostsagain.png[all hosts]
 
 Next we’ll do the following.
 
 [arabic]
 . Select both hosts.
-. Click `+Select Action+`.
-. Select `+Run all Ansible roles+`.
+. Click `Select Action`.
+. Select `Run all Ansible roles`.
 
 .apply system roles
 image::applysystemroles.png[apply system roles]
 
-In the `+Overview+` menu you’ll be shown the status of the jobs.
+In the `Overview` menu you’ll be shown the status of the jobs.
 
 .system role
 image::systemrolestatus.png[system role]
@@ -35,7 +35,7 @@ image::firewallsteps.png[firewall stpes]
 
 You can verify that port 80/tcp has been opened by doing the following.
 
-Click on the terminal tab for `+rhel1+` *or* `+rhel2+`.
+Click on the terminal tab for `rhel1` *or* `rhel2`.
 
 .host tab
 image::hosttab.png[host tab]

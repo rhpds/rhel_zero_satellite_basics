@@ -14,35 +14,52 @@ for different lifecycle environments, please see
 https://access.redhat.com/documentation/en-us/red_hat_satellite/6.11/html/managing_content/managing_content_views_content-management[Managing
 Content Views] in Satellite documentation.
 
-Click on `+Content Views+`.
+Click on `Content Views`.
 
-Click on `+Create New View+`.
+image:../assets/contentview.png[../assets/contentview]
 
-We’ll name this content view `+RHEL9+`:
+Click on `Create New View`.
+
+image:../assets/createcontentview.png[../assets/createcontentview]
+
+We’ll name this content view `RHEL9`:
 
 [source,bash]
 ----
 RHEL9
 ----
 
-Click `+Create content view+` to save it.
+Click `Create content view` to save it.
 
 ____
-*NOTE:* Please ensure that you type `+RHEL9+` in capital letters. We’ll
+*NOTE:* Please ensure that you type `RHEL9` in capital letters. We’ll
 need this value in step 6 of this lab.
 ____
 
-Add the `+BaseOS+` and `+AppStream+` repos. Click `+Add Repositories+`.
+image:../assets/createcv.png[../assets/createcv]
 
-Click `+Publish New Version+`.
+Click on `Show repositories`.
+
+.show repos
+image::showrepos.png[show repos]
+
+Add the `BaseOS` and `AppStream` repos. Click `Add Repositories`.
+
+image:../assets/addrepos.png[../assets/addrepos]
+
+Click `Publish New Version`.
+
+image:../assets/publish.png[../assets/publish]
 
 Next we’ll complete the following steps to publish and promote the
 content view.
 
 [arabic]
-. Click the sliding `+Promote+` button.
+. Click the sliding `Promote` button.
 . Select the lifecycle environment you wish to promote the content view
-to. In this case it is `+Test+`.
-. Click `+Next+` to review the task.
+to. In this case it is `Test`.
+. Click `Next` to review the task.
 
-Review the details and then click `+Finish+`.
+image:../assets/publishwizard.png[../assets/publishwizard]
+
+Review the details and then click `Finish`.

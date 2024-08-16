@@ -1,11 +1,16 @@
+In this section, we’ll synchronize Red Hat Enterprise Linux 9 BaseOS and
+AppStream repositories from the content delivery network.
+
 == Synchronize repositories
 
 Navigate to the Red Hat Repositories menu by clicking on
-`+Red Hat Repositories+` in the menu context below.
+`Red Hat Repositories` in the menu context below.
+
+image:../assets/redhatrepositories.png[../assets/redhatrepositories]
 
 The Red Hat Repositories menu will provide a list of available
 repositories. You can choose to synchronize whatever you want. In this
-lab we’ll synchronize the `+BaseOS+` and `+AppStream+` repos for RHEL 9.
+lab we’ll synchronize the `BaseOS` and `AppStream` repos for RHEL 9.
 
 Red Hat Enterprise Linux 9 is distributed through two main repositories:
 
@@ -25,28 +30,43 @@ Content in the AppStream repository includes additional user-space
 applications, runtime languages, and databases in support of the varied
 workloads and use cases.
 
-Click on the `+Recommended Repositories+` button to create a more
-succinct view of available repos (the image below displays the button in
-the off position; turn it on).
+Note: In order to save time, the BaseOS and AppStream repositories have
+been enabled.
 
-.recommanded repos button
-image::recommendedrepos.png[recommanded repos button]
+== Select repositories
+
+Click on the `Recommended Repositories` button to create a more succinct
+view of available repos (the image below displays the button in the off
+position; turn it on).
+
+image:../assets/recommendedrepos.png[../assets/recommendedrepos]
 
 Here’s what it looks like to add the BaseOS and AppStream repos.
 
-.addedrecommended repos
-image::addedrecommendedrepos.png[addedrecommended repos]
+image:../assets/addedrecommendedrepos.png[../assets/addedrecommendedrepos]
 
 And here’s an animation.
 
-Next, we’ll navigate to the `+Products+` menu.
+image:../assets/2022-08-11_09-02-27.gif[../assets/2022-08-11_09-02-27]
+
+== Synchronize repositories
+
+Next, we’ll navigate to the `Products` menu.
+
+image:../assets/products.png[../assets/products]
 
 Select the required product (in this case
-`+Red Hat Enterprise Linux for x86_64+`) and click `+Sync Selected+`.
+`Red Hat Enterprise Linux for x86_64`) and click `Sync Selected`.
 
-To view the status of the sync operation, click on `+Sync Status+`.
+image:../assets/synchronize.png[../assets/synchronize]
+
+To view the status of the sync operation, click on `Sync Status`.
+
+image:../assets/syncstatus.png[../assets/syncstatus]
 
 Expand the menu widgets to see a detailed report on the sync status.
+
+image:../assets/syncstatusdetailed.png[../assets/syncstatusdetailed]
 
 ____
 _NOTE:_ The BaseOS and AppStream repos take approximately 5 minutes to

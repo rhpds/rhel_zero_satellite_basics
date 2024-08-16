@@ -12,13 +12,17 @@ made to an activation key, it is applicable only to hosts that are
 registered with the amended activation key in the future. The changes
 are not made to existing hosts.
 
-To create an activation key, navigate to the `+Activation Keys+` menu.
+To create an activation key, navigate to the `Activation Keys` menu.
 
-Click on `+Create Activation Key+`.
+image:../assets/akmenu.png[../assets/akmenu]
 
-We’ll name this activation key (1) `+RHEL9+`, select the (2) `+Test+`
-environment, select the (3) `+RHEL9+` content view and then click (4)
-`+save+`.
+Click on `Create Activation Key`.
+
+image:../assets/createak.png[../assets/createak]
+
+We’ll name this activation key (1) `RHEL9`, select the (2) `Test`
+environment, select the (3) `RHEL9` content view and then click (4)
+`save`.
 
 For your cut/paste convenience:
 
@@ -32,10 +36,12 @@ ____
 names must match or the hosts will not be registered.
 ____
 
-If you click on `+Repository Sets+`, you’ll notice that this Activation
+image:../assets/akcreation.png[../assets/akcreation]
+
+If you click on `Repository Sets`, you’ll notice that this Activation
 Key provides access to the RHEL 9 AppStream and BaseOS repositories.
 This access is provided by configuring the Activation Key to use the
-`+RHEL9+` Content View.
+`RHEL9` Content View.
 
 .akrepos
 image::akrepos.png[akrepos]

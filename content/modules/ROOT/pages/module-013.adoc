@@ -10,7 +10,7 @@ Satellite.
 
 * https://www.redhat.com/en/blog/satellite-host-configuration-rhel-system-roles-powered-ansible[Learn
 how to apply RHEL System Roles with Red Hat Satellite].
-* https://access.redhat.com/documentation/en-us/red_hat_satellite/6.11/html/managing_content/converting-a_host-with-convert2rhel_content-management[Use
+* https://access.redhat.com/documentation/en-us/red_hat_satellite/6.15/html/managing_hosts/converting-a-host-to-rhel_managing-hosts[Use
 Satellite to perform convert2rhel bulk operations]. This operation
 cannot be performed in this lab since there are no non-rhel hosts.
 
@@ -19,3 +19,7 @@ link.
 
 * https://access.redhat.com/support/policy/updates/satellite[Red Hat
 Satellite Product Life Cycle]
+
+Please leave feedback here.
+
+* https://red.ht/satellite-labs-feedback[Feedback discussion]

@@ -31,6 +31,8 @@ antora:
     - name: module-013
       label: Module 13
 tabs:
-  - name: terminal
+  - name: ">_ root"
     port: 443
-    path: /wetty
+    path: /tty1
+    user: root
+    host: bastion
